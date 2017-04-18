@@ -1,0 +1,75 @@
+.clear {
+    display: block;
+    *zoom: 1;
+}
+.clear:after {
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+}
+//加载样式
+.loader(@c1:#34495e;@c2:#fff;@w:10em) {
+    border-radius: 50%;
+    font-size: 11px;
+    text-indent: -99999em;
+    margin: 20px auto;
+    position: relative;
+    width: @w;
+    height: @w;
+    box-shadow: inset 0 0 0 1em @c1;
+    &:before,
+    &:after {
+        border-radius: 50%;
+        position: absolute;
+        content: '';
+        width: @w/2 + 0.2;
+        height: @w+0.2;
+        background: #fff;
+        border-radius: 0;
+    }
+    &:before {
+        border-radius: @w+0.2 0 0 @w+0.2;
+        top: -0.1em;
+        left: -0.1em;
+        -webkit-transform-origin: @w/2 + 0.2 @w/2 + 0.1;
+        transform-origin: @w/2 + 0.2 @w/2 + 0.1;
+        -webkit-animation: load2 2s infinite ease 1.5s;
+        animation: load2 2s infinite ease 1.5s;
+    }
+    &:after {
+        border-radius: 0 @w+0.2 @w+0.2 0;
+        top: -0.1em;
+        left: @w/2 + 0.1;
+        -webkit-transform-origin: 0 @w/2 + 0.1;
+        transform-origin: 0 @w/2 + 0.1;
+        -webkit-animation: load2 2s infinite ease;
+        animation: load2 2s infinite ease;
+    }
+}
+@-webkit-keyframes load2 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes load2 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.load {
+    .loader(red;#fff;8em);
+}

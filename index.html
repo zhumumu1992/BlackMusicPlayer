@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="svg/font.css"/>
+		<title>音乐播放器</title>
+	</head>
+	<body>
+		<musicBox id="music_box">
+			<audio id="audio" src="music/1.mp3"></audio>
+			<section id="musicCover">
+				<section id="jindutiao">
+					<article id="timeLine">
+						<article id="lineNode"></article>
+						<article id="lineTo"></article>
+					</article>
+				</section>
+				<center>
+					<musicname>
+						<p id="musicName"></p>
+						<p id="musicSinger"></p>
+					</musicname>
+					<bofang>
+						<article class="icon-shuffle" id="suijiM"></article>
+						<img src="img/shangyishou.gif" id="prevM" />
+						<playmusicBG>
+							<article class="icon-play3" id="playM"></article>
+						</playmusicBG>
+						<img src="img/xiayishou.gif" id="nextM" />
+						<img src="img/yinliang.gif" id="yinliang_ico" title="调节音量" />
+					</bofang>
+				</center>
+				<volum id="yinliangBox">
+					<section id="volume">
+						<article id="voluNode"></article>
+						<article id="yl_lineTo"></article>
+					</section>
+				</volum>
+				
+				
+			</section>
+		</musicBox>
+		
+		
+		<script src="js/js.js"></script>
+	</body>
+</html>

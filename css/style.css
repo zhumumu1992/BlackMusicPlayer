@@ -1,0 +1,318 @@
+html,
+body,
+div,
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+i,
+a,
+em,
+input,
+form,
+img,
+ul,
+li,
+ol,
+dl,
+dt,
+section,
+article,
+nav,
+menu,
+aside,
+header,
+footer,
+musicbox,
+left,
+right,
+top,
+bottom {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font-style: normal;
+  box-sizing: border-box;
+}
+section,
+article,
+nav,
+menu,
+aside,
+header,
+footer,
+musicbox,
+left,
+right,
+top,
+bottom {
+  display: block;
+}
+ul,
+li,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: inline-block;
+}
+.clear {
+  display: block;
+  *zoom: 1;
+}
+.clear:after {
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both;
+}
+@-webkit-keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.load {
+  border-radius: 50%;
+  font-size: 11px;
+  text-indent: -99999em;
+  margin: 20px auto;
+  position: relative;
+  width: 8em;
+  height: 8em;
+  box-shadow: inset 0 0 0 1em red;
+}
+.load:before,
+.load:after {
+  border-radius: 50%;
+  position: absolute;
+  content: '';
+  width: 4.2em;
+  height: 8.2em;
+  background: #fff;
+  border-radius: 0;
+}
+.load:before {
+  border-radius: 8.2em 0 0 8.2em;
+  top: -0.1em;
+  left: -0.1em;
+  -webkit-transform-origin: 4.2em 4.1em;
+  transform-origin: 4.2em 4.1em;
+  -webkit-animation: load2 2s infinite ease 1.5s;
+  animation: load2 2s infinite ease 1.5s;
+}
+.load:after {
+  border-radius: 0 8.2em 8.2em 0;
+  top: -0.1em;
+  left: 4.1em;
+  -webkit-transform-origin: 0 4.1em;
+  transform-origin: 0 4.1em;
+  -webkit-animation: load2 2s infinite ease;
+  animation: load2 2s infinite ease;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: url(../img/bg.gif) no-repeat;
+  background-size: cover;
+}
+musicBox {
+  width: 300px;
+  height: 326px;
+  background: #121212;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -163px 0 0 -150px;
+  box-shadow: 0 10px 50px #000;
+  border-radius: 5px;
+}
+musicBox > section {
+  width: 298px;
+  height: 322px;
+  margin: 0 auto;
+  border: 1px solid #7d8a88;
+  border-radius: 5px;
+}
+musicBox > section > section {
+  width: 298px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid #0c0c0c;
+  border-radius: 1px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 191px;
+}
+musicBox > section > section > #timeLine {
+  width: 298px;
+  height: 7px;
+  background: #0e0e0e;
+  border-radius: 10px;
+  position: relative;
+  top: 1px;
+  left: 1px;
+  cursor: pointer;
+}
+musicBox > section > section > #timeLine > #lineNode {
+  width: 11px;
+  height: 11px;
+  border: 2px solid #fff;
+  background: #a02820;
+  position: absolute;
+  left: 0px;
+  top: -2px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+musicBox > section > section > #timeLine > #lineTo {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(#de726c, #b0352b);
+  box-shadow: 10px 0 50px #000;
+  border-radius: 5px;
+}
+musicBox > section > center {
+  width: 298px;
+  height: 120px;
+  z-index: 2;
+  margin: 0 auto;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.9);
+}
+musicBox > section > center > musicname {
+  display: block;
+  height: 39px;
+  margin-top: 14px;
+}
+musicBox > section > center > musicname > #musicName {
+  height: 17px;
+  line-height: 17px;
+  font-size: 17px;
+  color: #fff;
+  text-align: center;
+  font-family: "微软雅黑";
+}
+musicBox > section > center > musicname > #musicSinger {
+  margin-top: 9px;
+  height: 12px;
+  line-height: 12px;
+  font-size: 12px;
+  color: #adadad;
+  text-align: center;
+}
+musicBox > section > center > bofang {
+  display: block;
+  width: 298px;
+  height: 40px;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+musicBox > section > center > bofang > img {
+  cursor: pointer;
+}
+musicBox > section > center > bofang > #suijiM {
+  width: 17px;
+  height: 17px;
+  float: left;
+  margin: 12px 0 0 14px;
+  font-size: 17px;
+  color: #555555;
+  cursor: pointer;
+}
+musicBox > section > center > bofang > #prevM {
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin: 5px 0 0 72px;
+}
+musicBox > section > center > bofang > playmusicBG {
+  display: block;
+  width: 40px;
+  height: 40px;
+  float: left;
+  background: url(../img/bofang.gif) no-repeat;
+  background-size: cover;
+}
+musicBox > section > center > bofang > playmusicBG > #playM {
+  margin: 9px 0 0 0;
+  cursor: pointer;
+  font-size: 22px;
+  color: #c5bfbf;
+}
+musicBox > section > center > bofang > #nextM {
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin-top: 5px;
+}
+musicBox > section > center > bofang > #yinliang_ico {
+  width: 35px;
+  height: 35px;
+  float: right;
+  margin: 3px 16px 0 0;
+}
+musicBox > section > volum {
+  display: block;
+  width: 32px;
+  height: 97px;
+  background: url(../img/yinliangBG.png) no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 57px;
+  right: 18px;
+  z-index: 3;
+  display: none;
+}
+musicBox > section > volum > #volume {
+  width: 6px;
+  height: 75px;
+  background: #0f0f0f;
+  border-radius: 10px;
+  position: relative;
+  top: 9px;
+  left: 13px;
+  background: linear-gradient(#de726c, #b0352b);
+}
+musicBox > section > volum > #volume > #voluNode {
+  width: 10px;
+  height: 3px;
+  background: #ccc6c6;
+  position: absolute;
+  left: -2px;
+  top: 0px;
+  cursor: pointer;
+}
+musicBox > section > volum > #volume > #yl_lineTo {
+  width: 100%;
+  height: 0%;
+  background: #0f0f0f;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=style.css.map */
